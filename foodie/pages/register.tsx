@@ -1,5 +1,8 @@
 import Link from 'next/link';
-import React, { ChangeEvent, useState } from 'react';
+import React, { ChangeEvent, useEffect, useState } from 'react';
+import { auth, registerWithEmailAndPassword } from '../firebase-lib/firebase';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import Router from 'next/router';
 
 const Register = () => {
   const [userName, setUserName] = useState('');
@@ -7,6 +10,17 @@ const Register = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [registerError, setRegisterError] = useState('');
+  const [user, loading, error] = useAuthState(auth);
+
+  useEffect(() => {
+    if (loading) {
+      // maybe trigger a loading screen
+      return;
+    }
+    if (user) {
+      Router.push(`/dashboard/${user.uid}/home`);
+    }
+  }, [user, loading]);
 
   const inputUserName = (e: ChangeEvent<HTMLInputElement>) => {
     setUserName(e.target.value);
@@ -51,7 +65,8 @@ const Register = () => {
       return;
     }
 
-    setRegisterError('Register successfully');
+    setRegisterError('');
+    registerWithEmailAndPassword(userName, email, password);
   };
 
   return (
