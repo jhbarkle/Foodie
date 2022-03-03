@@ -1,11 +1,15 @@
-import React, { ChangeEvent } from 'react';
+import React, { ChangeEvent, useEffect } from 'react';
 import Link from 'next/link';
 import { useState } from 'react';
+import { auth, logInWithEmailAndPassword } from '../firebase-lib/firebase';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import Router from 'next/router';
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loginError, setLoginError] = useState('');
+  const [user, loading, error] = useAuthState(auth);
 
   const inputEmail = (e: ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
@@ -15,13 +19,27 @@ const Login: React.FC = () => {
     setPassword(e.target.value);
   };
 
-  const login = () => {
-    try {
-    } catch (e) {}
+  const loginCheck = () => {
+    if (!email || !password) {
+      console.log('error');
+      setLoginError('Invalid Email or Password');
+    } else {
+      logInWithEmailAndPassword(email, password);
+    }
   };
 
+  useEffect(() => {
+    if (loading) {
+      // maybe trigger a loading screen
+      return;
+    }
+    if (user) {
+      Router.push(`/dashboard/${user.uid}/home`);
+    }
+  }, [user, loading]);
+
   return (
-    <form>
+    <div>
       <input
         type="text"
         placeholder="Enter Email"
@@ -37,7 +55,7 @@ const Login: React.FC = () => {
         onChange={inputPassword}
       />
       <h4>{loginError}</h4>
-      <button>Login</button>
+      <button onClick={loginCheck}>Login</button>
       <div>
         <p>Don't have an account?</p>
         <Link href="/register">
@@ -47,7 +65,7 @@ const Login: React.FC = () => {
       <Link href="/forgotPassword">
         <button>Forgot Password?</button>
       </Link>
-    </form>
+    </div>
   );
 };
 
