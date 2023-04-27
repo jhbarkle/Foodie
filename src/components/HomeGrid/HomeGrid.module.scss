@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/*Grid Sections*/
+.grid_container_top {
+  display: grid;
+  grid-template-columns: 2.5fr 3.5fr;
+  grid-template-rows: 56vh;
+}
+
+.grid_container_bottom {
+  display: grid;
+  grid-template-columns: 1.5fr 3fr 2fr;
+  grid-template-rows: 40vh;
+}
+
+/********** Individual Sections ***********/
+.grid_item {
+  text-align: center;
+  width: 100%;
+}
+
+/* Fridge Section */
+
+#two {
+  background-color: #3498db;
+}
+
+/* Tip of the Day Section */
+
+#three {
+  background-color: #95a5a6;
+}
+
+/* Recipe Info Section */
+#four {
+  background-color: #9b59b6;
+}
+
+/* Recipe Image Section */
+#five {
+  background-color: #34495e;
+}
+
+/*********** Media Queries *************/
+
+/* Screen Size Smaller than 1200px */
+@media only screen and (max-width: 1200px) {
+  .grid_container_top {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 30vh);
+  }
+
+  .welcome_header_title {
+    font-size: 40px;
+    text-align: center;
+    width: 50%;
+  }
+
+  .welcome_header_description {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .grid_container_bottom {
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    grid-template-rows: 40vh;
+  }
+
+  #three {
+    display: none;
+  }
+}
+
+/* Screen Size Smaller than 900px */
+@media only screen and (max-width: 900px) {
+  .grid_container_bottom {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 40vh;
+  }
+}
+
+/* Screen Size Smaller than 600px */
+@media only screen and (max-width: 600px) {
+  .grid_container_bottom {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40vh;
+  }
+
+  .welcome_header_title {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    width: 70%;
+  }
+
+  .welcome_header_description {
+    font-size: 14px;
+    text-align: center;
+    width: 70%;
+  }
+}

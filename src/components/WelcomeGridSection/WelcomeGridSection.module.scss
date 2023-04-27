@@ -1,0 +1,34 @@
+/* Welcome Section */
+#one {
+  background-color: #1abc9c;
+}
+
+.welcome_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: green;
+  height: 100%;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
+  background-image: url('../../assets/Background-with-filter.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.welcome_header_title {
+  width: 70%;
+  margin: 0;
+  font-size: 45px;
+  font-weight: 800;
+  color: white;
+  text-align: left;
+}
+
+.welcome_header_description {
+  width: 70%;
+  font-size: 20px;
+  color: white;
+  text-align: left;
+}
