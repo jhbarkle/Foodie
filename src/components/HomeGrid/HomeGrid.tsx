@@ -1,3 +1,4 @@
+import FridgeGridSection from '../FridgeGridSection/FridgeGridSection';
 import TipGridSection from '../TipGridSection/TipGridSection';
 import WelcomeGridSection from '../WelcomeGridSection/WelcomeGridSection';
 import styles from './HomeGrid.module.scss';
@@ -10,7 +11,7 @@ const HomeGrid = () => {
           <WelcomeGridSection />
         </section>
         <section className={styles.grid_item} id={styles.two}>
-          Fridge
+          <FridgeGridSection />
         </section>
       </div>
       <div className={styles.grid_container_bottom}>

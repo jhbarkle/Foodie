@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap');
+
+.ingredients_input {
+  width: 98.5%;
+  border: none;
+  height: 65px;
+  background-color: black;
+  color: white;
+  padding-left: 18px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  outline: none;
+}
+
+.fridge_ingredients_container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 47vh;
+  font-family: 'Raleway', sans-serif;
+}
+
+.fridge_data_section {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.fridge_data_text > p,
+h2 {
+  padding-left: 10px;
+  color: black;
+}
+
+.fridge_data_section > button {
+  background-color: black;
+  color: white;
+  border: none;
+  height: 70px;
+}
