@@ -4,12 +4,12 @@
 .grid_container_top {
   display: grid;
   grid-template-columns: 2.5fr 3.5fr;
-  grid-template-rows: 56vh;
+  grid-template-rows: 57vh;
 }
 
 .grid_container_bottom {
   display: grid;
-  grid-template-columns: 1.5fr 3fr 2fr;
+  grid-template-columns: 2fr 3fr 1.5fr;
   grid-template-rows: 40vh;
 }
 

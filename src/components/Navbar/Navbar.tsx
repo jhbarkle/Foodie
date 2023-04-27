@@ -5,6 +5,7 @@ const Navbar = () => {
     <>
       <header>
         <nav className={styles.primary_nav}>
+          <img src="../../../public/fridge.png" alt="fridge" />
           <a className={styles.logo_text} href="/">
             Foodie
           </a>

@@ -5,20 +5,27 @@ body {
 }
 
 .primary_nav {
-  background-color: black;
+  background-color: white;
   top: 0;
   left: 0;
   right: 0;
-  height: 40px;
+  height: 60px;
   position: fixed;
   display: flex;
   align-items: center;
-  padding: 0 15px;
+  padding: 0 25px;
+}
+
+.primary_nav > img {
+  height: 26px;
+  aspect-ratio: 1;
 }
 
 .logo_text {
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
-  color: white;
+  color: black;
   font-weight: 900;
+  font-size: 30px;
+  margin-left: 8px;
 }

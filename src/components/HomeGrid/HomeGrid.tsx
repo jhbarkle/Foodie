@@ -1,3 +1,4 @@
+import TipGridSection from '../TipGridSection/TipGridSection';
 import WelcomeGridSection from '../WelcomeGridSection/WelcomeGridSection';
 import styles from './HomeGrid.module.scss';
 
@@ -14,7 +15,7 @@ const HomeGrid = () => {
       </div>
       <div className={styles.grid_container_bottom}>
         <section className={styles.grid_item} id={styles.three}>
-          Tip of the Day
+          <TipGridSection />
         </section>
         <section className={styles.grid_item} id={styles.four}>
           Recipe
