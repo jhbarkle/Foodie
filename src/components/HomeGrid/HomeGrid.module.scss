@@ -24,11 +24,6 @@
   background-color: #9b59b6;
 }
 
-/* Recipe Image Section */
-#five {
-  background-color: #34495e;
-}
-
 /*********** Media Queries *************/
 
 /* Screen Size Smaller than 1200px */
@@ -37,17 +32,6 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 30vh 53.5vh;
-  }
-
-  .welcome_header_title {
-    font-size: 40px;
-    text-align: center;
-    width: 50%;
-  }
-
-  .welcome_header_description {
-    font-size: 18px;
-    text-align: center;
   }
 
   .grid_container_bottom {
@@ -68,26 +52,23 @@
     grid-template-columns: 3fr 2fr;
     grid-template-rows: 40vh;
   }
+
+  .grid_container_top {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40vh 52.5vh;
+  }
 }
 
 /* Screen Size Smaller than 600px */
 @media only screen and (max-width: 600px) {
-  .grid_container_bottom {
+  .grid_container_top {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 40vh;
+    grid-template-rows: 20vh 30vh;
   }
 
-  .welcome_header_title {
-    font-size: 30px;
-    color: white;
-    text-align: center;
-    width: 70%;
-  }
-
-  .welcome_header_description {
-    font-size: 14px;
-    text-align: center;
-    width: 70%;
+  .grid_container_bottom {
+    visibility: hidden;
   }
 }

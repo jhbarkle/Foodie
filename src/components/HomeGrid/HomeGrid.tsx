@@ -1,4 +1,6 @@
 import FridgeGridSection from '../FridgeGridSection/FridgeGridSection';
+import RecipeImageSection from '../RecipeImageSection/RecipeImageSection';
+import RecipeInfoSection from '../RecipeInfoSection/RecipeInfoSection';
 import TipGridSection from '../TipGridSection/TipGridSection';
 import WelcomeGridSection from '../WelcomeGridSection/WelcomeGridSection';
 import styles from './HomeGrid.module.scss';
@@ -19,10 +21,10 @@ const HomeGrid = () => {
           <TipGridSection />
         </section>
         <section className={styles.grid_item} id={styles.four}>
-          Recipe
+          <RecipeInfoSection />
         </section>
         <section className={styles.grid_item} id={styles.five}>
-          Recipe Image
+          <RecipeImageSection image={'../../../public/bowl-salad.jpg'} />
         </section>
       </div>
     </>

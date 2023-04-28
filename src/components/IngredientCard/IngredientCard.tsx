@@ -9,8 +9,13 @@ const IngredientCard: React.FC<IngredientCardProps> = ({ name }) => {
   return (
     <li>
       <section className={styles.card_container}>
-        <p>{name}</p>
-        <button className={styles.delete_button}></button>
+        <span className={styles.ingr_name_text_container}>
+          <p>{name}</p>
+        </span>
+
+        <span className={styles.ingr_delete_button_container}>
+          <button className={styles.delete_button}></button>
+        </span>
       </section>
     </li>
   );

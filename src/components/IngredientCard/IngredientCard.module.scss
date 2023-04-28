@@ -1,3 +1,58 @@
 .card_container {
-  border: 1px solid blue;
+  // background-color: black;
+  margin: 5px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  align-items: center;
+  font-family: 'Raleway', sans-serif;
+  // width: 60%;
+}
+
+// .card_container > span {
+//   background-color: white;
+// }
+
+.ingr_name_text_container {
+  background-color: black;
+  width: 100%;
+}
+
+.ingr_delete_button_container {
+  background-color: white;
+  padding: 10.5px;
+  border: 1px solid black;
+}
+
+.delete_button {
+  background-image: url('/trash-bin.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 25px;
+  aspect-ratio: 1;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.ingr_delete_button_container:hover {
+  transition: 0.2s ease-in;
+  background-color: #e74c3c;
+  padding: 10.5px;
+  border: 1px solid black;
+}
+
+/* Screen Size Smaller than 600px */
+@media only screen and (max-width: 600px) {
+  .card_container {
+    margin: 5px;
+    border-radius: 2px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1px;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+  }
 }
