@@ -3,8 +3,8 @@
 /*Grid Sections*/
 .grid_container_top {
   display: grid;
-  grid-template-columns: 2.5fr 3.5fr;
-  grid-template-rows: 53vh;
+  grid-template-columns: 2fr 4fr;
+  grid-template-rows: 53.5vh;
 }
 
 .grid_container_bottom {
@@ -17,18 +17,6 @@
 .grid_item {
   text-align: center;
   width: 100%;
-}
-
-/* Fridge Section */
-
-#two {
-  background-color: white;
-}
-
-/* Tip of the Day Section */
-
-#three {
-  background-color: #95a5a6;
 }
 
 /* Recipe Info Section */
@@ -48,7 +36,7 @@
   .grid_container_top {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 30vh);
+    grid-template-rows: 30vh 53.5vh;
   }
 
   .welcome_header_title {

@@ -1,6 +1,18 @@
+import { useState } from 'react';
 import styles from './FridgeGridSection.module.scss';
+import IngredientCard from '../IngredientCard/IngredientCard';
 
 const FridgeGridSection = () => {
+  const [ingredientList, setIngredientList] = useState([
+    'Chicken',
+    'Soy Sauce',
+    'Sauce',
+    'Chives',
+    'Onion',
+    'Cheese',
+    'Beef'
+  ]);
+
   return (
     <span className={styles.fridge_container}>
       <input
@@ -16,7 +28,13 @@ const FridgeGridSection = () => {
           </span>
           <button>Search</button>
         </section>
-        <section className={styles.fridge_added_ingredients}>asdf</section>
+        <section className={styles.added_ingredients_section}>
+          <ul className={styles.ingredient_list}>
+            {ingredientList.map((ingredient) => {
+              return <IngredientCard key={ingredient} name={ingredient} />;
+            })}
+          </ul>
+        </section>
       </section>
     </span>
   );

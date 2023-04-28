@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap');
-
 body {
   margin: 0;
 }
 
+/* Primary Navbar */
 .primary_nav {
   background-color: white;
   top: 0;
@@ -16,11 +15,13 @@ body {
   padding: 0 25px;
 }
 
+/* Navbar Image Logo */
 .primary_nav > img {
   height: 23px;
   aspect-ratio: 1;
 }
 
+/* Navbar Text Logo */
 .logo_text {
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
