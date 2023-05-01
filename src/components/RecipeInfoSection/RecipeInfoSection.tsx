@@ -3,7 +3,6 @@ import styles from './RecipeInfoSection.module.scss';
 const RecipeInfoSection = () => {
   return (
     <div className={styles.info_container}>
-      <button className={styles.full_recipe_button}>View Full Recipe</button>
       <div className={styles.info_section}>
         <h2 className={styles.recipe_title}>Roasted Pineapple Pizza</h2>
         <section className={styles.likes_section}>
@@ -17,6 +16,7 @@ const RecipeInfoSection = () => {
           aliquip ex ea commodo consequat.
         </section>
       </div>
+      <button className={styles.full_recipe_button}>View Full Recipe</button>
     </div>
   );
 };

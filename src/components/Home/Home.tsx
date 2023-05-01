@@ -1,5 +1,5 @@
-import HomeGrid from '../components/HomeGrid/HomeGrid';
-import Navbar from '../components/Navbar/Navbar';
+import HomeGrid from '../HomeGrid/HomeGrid';
+import Navbar from '../Navbar/Navbar';
 
 const Home = () => {
   return (

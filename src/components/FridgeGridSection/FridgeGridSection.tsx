@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from './FridgeGridSection.module.scss';
 import IngredientCard from '../IngredientCard/IngredientCard';
+import { Link } from 'react-router-dom';
 
 const FridgeGridSection = () => {
   const [ingredientList] = useState([
@@ -30,7 +31,9 @@ const FridgeGridSection = () => {
             <h2>Fridge |</h2>
             <p>Total: 6</p>
           </span>
-          <button>Search</button>
+          <Link className={styles.fridge_data_section_button} to="/results">
+            <button>Search</button>
+          </Link>
         </section>
         <section className={styles.added_ingredients_section}>
           <ul className={styles.ingredient_list}>

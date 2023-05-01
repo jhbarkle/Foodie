@@ -12,7 +12,6 @@ const RecipeImageSection: React.FC<RecipeImageProps> = ({ image }) => {
       style={{ backgroundImage: `url(${image})` }}
     >
       <span className={styles.buttons_container}>
-        <h5>browse recipes</h5>
         <button className={styles.left_button}></button>
         <button className={styles.right_button}></button>
       </span>

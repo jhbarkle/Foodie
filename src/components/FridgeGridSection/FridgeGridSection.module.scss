@@ -65,18 +65,19 @@ h2 {
 }
 
 /* Search Button */
-.fridge_data_section > button {
+.fridge_data_section_button > button {
   background-color: black;
   color: white;
   border: none;
   height: 70px;
   font-family: 'Raleway', sans-serif;
   width: 150px;
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 17px;
   cursor: pointer;
 }
 
-.fridge_data_section > button:hover {
+.fridge_data_section_button > button:hover {
   background-color: #95a5a6;
   color: white;
   transition: 0.2s ease-in-out;
