@@ -2,7 +2,7 @@
 .ingredients_input {
   width: 100%;
   border: none;
-  height: 65px;
+  height: 70px;
   background-color: black;
   color: white;
   font-family: 'Raleway', sans-serif;
@@ -16,8 +16,10 @@
 /* Added Ingredients */
 .added_ingredients_section {
   overflow-y: auto;
-  margin: 0 25px;
+  margin: 10px 25px;
   border: 1px solid black;
+  padding: 10px;
+  max-height: 285px;
 }
 
 /* Fridge Icon */
@@ -49,13 +51,17 @@
   align-items: center;
   justify-content: space-between;
   width: fit-content;
-  column-gap: 15px;
+  column-gap: 5px;
 }
 
 /* Fridge Text & Count */
 .fridge_data_text > p,
 h2 {
   color: black;
+}
+
+.fridge_data_text > p {
+  padding-left: 10px;
 }
 
 /* Search Button */
@@ -81,43 +87,38 @@ h2 {
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-top: 15px;
 }
 
 /*********** Media Queries *************/
 
 /* Screen Size Smaller than 600px */
 @media only screen and (max-width: 600px) {
-  .fridge_ingredients_container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 39.5vh;
-    font-family: 'Raleway', sans-serif;
+  .fridge_data_text {
+    column-gap: 1px;
   }
 
+  /* Left Side Fridge Section */
   .fridge_data_section {
     background-color: white;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-    text-align: left;
-    order: 1;
+    margin: 15px 10px;
+    align-items: center;
   }
 
+  /* Search Button */
   .fridge_data_section > button {
-    background-color: white;
-    color: black;
-    border: none;
-    height: 70px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    cursor: pointer;
-    position: sticky;
-    bottom: 0;
+    height: 60px;
+    width: 130px;
   }
 
-  .fridge_data_text > p,
-  h2 {
-    display: none;
+  /* Added Ingredients */
+  .added_ingredients_section {
+    overflow-y: auto;
+    margin: 10px 10px;
+    border: 1px solid black;
+    padding: 10px;
+    max-height: 285px;
   }
 }
