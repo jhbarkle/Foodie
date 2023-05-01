@@ -1,0 +1,58 @@
+.info_container {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Raleway', sans-serif;
+  row-gap: 10px;
+  background-color: white;
+  height: 100%;
+}
+
+.full_recipe_button {
+  width: 40%;
+  align-self: flex-end;
+  border: none;
+  height: 70px;
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.full_recipe_button:hover {
+  background-color: #95a5a6;
+}
+
+.info_section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  text-align: left;
+  padding: 0 25px;
+}
+
+.recipe_title {
+  padding: 0;
+  margin: 0;
+}
+
+.likes_section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.likes_section > img {
+  height: 23px;
+  aspect-ratio: 1;
+}
+
+.likes_section > p {
+  color: black;
+  font-weight: 500;
+}
+
+.recipe_description {
+  margin-top: 20px;
+}

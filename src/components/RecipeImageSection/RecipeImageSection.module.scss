@@ -20,11 +20,11 @@
   aspect-ratio: 1;
   cursor: pointer;
   font-size: 20px;
+  transition: 0.3s ease-in-out;
 }
 
 .buttons_container > button:hover {
-  background-color: black;
-  color: white;
+  background-color: #95a5a6;
 }
 
 .buttons_container > h5 {
@@ -32,4 +32,18 @@
   font-family: 'Raleway', sans-serif;
   color: white;
   font-weight: 500;
+}
+
+.left_button {
+  background-image: url('../../../public/left-arrow.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+}
+
+.right_button {
+  background-image: url('../../../public/right-arrow.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
 }

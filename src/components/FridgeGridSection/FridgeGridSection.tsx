@@ -3,7 +3,7 @@ import styles from './FridgeGridSection.module.scss';
 import IngredientCard from '../IngredientCard/IngredientCard';
 
 const FridgeGridSection = () => {
-  const [ingredientList, setIngredientList] = useState([
+  const [ingredientList] = useState([
     'Chicken',
     'Soy Sauce',
     'Sauce',

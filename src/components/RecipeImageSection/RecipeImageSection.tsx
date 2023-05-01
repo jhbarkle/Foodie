@@ -13,8 +13,8 @@ const RecipeImageSection: React.FC<RecipeImageProps> = ({ image }) => {
     >
       <span className={styles.buttons_container}>
         <h5>browse recipes</h5>
-        <button>{'<'}</button>
-        <button>{'>'}</button>
+        <button className={styles.left_button}></button>
+        <button className={styles.right_button}></button>
       </span>
     </div>
   );
