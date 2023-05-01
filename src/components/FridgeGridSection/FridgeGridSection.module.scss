@@ -16,13 +16,20 @@
 /* Added Ingredients */
 .added_ingredients_section {
   overflow-y: auto;
+  margin: 0 25px;
+  border: 1px solid black;
+}
+
+/* Fridge Icon */
+.fridge_data_text > img {
+  height: 23px;
+  aspect-ratio: 1;
 }
 
 /* Fridge Container */
 .fridge_ingredients_container {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 47vh;
+  display: flex;
+  flex-direction: column;
   font-family: 'Raleway', sans-serif;
   background-color: white;
 }
@@ -31,15 +38,23 @@
 .fridge_data_section {
   background-color: white;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-  text-align: left;
+  margin: 25px;
+  align-items: center;
+}
+
+.fridge_data_text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: fit-content;
+  column-gap: 15px;
 }
 
 /* Fridge Text & Count */
 .fridge_data_text > p,
 h2 {
-  padding-left: 10px;
   color: black;
 }
 
@@ -50,6 +65,7 @@ h2 {
   border: none;
   height: 70px;
   font-family: 'Raleway', sans-serif;
+  width: 150px;
   font-weight: 700;
   cursor: pointer;
 }
@@ -57,7 +73,7 @@ h2 {
 .fridge_data_section > button:hover {
   background-color: #95a5a6;
   color: white;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 /* UL holding Added Ingredients */
@@ -96,7 +112,8 @@ h2 {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     cursor: pointer;
-    position: relative;
+    position: sticky;
+    bottom: 0;
   }
 
   .fridge_data_text > p,

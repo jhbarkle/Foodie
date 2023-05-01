@@ -26,6 +26,7 @@ const FridgeGridSection = () => {
       <section className={styles.fridge_ingredients_container}>
         <section className={styles.fridge_data_section}>
           <span className={styles.fridge_data_text}>
+            <img src="../../../public/fridge.png" alt="fridge" />
             <h2>Fridge</h2>
             <p>Total: 6</p>
           </span>
