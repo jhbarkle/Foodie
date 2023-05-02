@@ -7,15 +7,23 @@
   background-color: $ghost-white;
   height: 100%;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+}
+
+.featured_recipes_title {
+  padding: 0;
+  margin: 0;
+  margin-left: 25px;
+  margin-top: 50px;
+  color: $grey;
 }
 
 .full_recipe_button {
-  width: 40%;
+  width: 30%;
   align-self: flex-end;
   border: none;
-  height: 70px;
-  background-color: black;
+  height: 80px;
+  background-color: $dark-gray;
   color: white;
   font-weight: 600;
   transition: 0.3s ease-in-out;
@@ -36,14 +44,14 @@
   flex-direction: column;
   row-gap: 5px;
   text-align: left;
-  padding: 20px 25px;
+  padding: 0px 25px;
   margin-top: 20px;
 }
 
 .recipe_title {
   padding: 0;
   margin: 0;
-  font-size: 32px;
+  font-size: 30px;
 
   animation: fadeInAnimation ease 1s;
   animation-iteration-count: 1;
@@ -69,12 +77,12 @@
 .likes_section > p {
   color: black;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .recipe_description {
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 17px;
 
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;

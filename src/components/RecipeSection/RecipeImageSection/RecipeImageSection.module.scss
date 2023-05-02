@@ -1,3 +1,5 @@
+@import '../../../styleLibrary.scss';
+
 /* Recipe Image Container */
 .recipe_container {
   background-position: center;
@@ -25,6 +27,7 @@
   cursor: pointer;
   font-size: 20px;
   transition: 0.3s ease-in-out;
+  background-color: $ghost-white;
 
   /* Animations */
   animation: fadeInAnimation ease 1s;
