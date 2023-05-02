@@ -1,10 +1,12 @@
+@import '../../styleLibrary.scss';
+
 body {
   margin: 0;
 }
 
 /* Primary Navbar */
 .primary_nav {
-  background-color: white;
+  background-color: $ghost-white;
   top: 0;
   left: 0;
   right: 0;

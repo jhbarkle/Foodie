@@ -11,10 +11,7 @@ const FridgeGridSection = () => {
     'Chives',
     'Onion',
     'Cheese',
-    'Beef',
-    'Soy Sauce',
-    'Sauce',
-    'Chives'
+    'Beef'
   ]);
 
   return (

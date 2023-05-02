@@ -1,9 +1,11 @@
+@import '../../styleLibrary.scss';
+
 /* Ingredients Input */
 .ingredients_input {
   width: 100%;
   border: none;
   height: 70px;
-  background-color: black;
+  background-color: $dark-gray;
   color: white;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
@@ -33,12 +35,11 @@
   display: flex;
   flex-direction: column;
   font-family: 'Raleway', sans-serif;
-  background-color: white;
+  background-color: $ghost-white;
 }
 
 /* Left Side Fridge Section */
 .fridge_data_section {
-  background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -57,7 +58,7 @@
 /* Fridge Text & Count */
 .fridge_data_text > p,
 h2 {
-  color: black;
+  color: $dark-gray;
 }
 
 .fridge_data_text > p {
@@ -66,7 +67,7 @@ h2 {
 
 /* Search Button */
 .fridge_data_section_button > button {
-  background-color: black;
+  background-color: $dark-gray;
   color: white;
   border: none;
   height: 70px;
@@ -100,7 +101,7 @@ h2 {
 
   /* Left Side Fridge Section */
   .fridge_data_section {
-    background-color: white;
+    background-color: $ghost-white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

@@ -1,19 +1,22 @@
+/* eslint-disable react/prop-types */
+import { Recipe } from '../Recipes';
 import styles from './RecipeInfoSection.module.scss';
 
-const RecipeInfoSection = () => {
+interface RecipeInfoSectionProps {
+  recipe: Recipe;
+}
+
+const RecipeInfoSection: React.FC<RecipeInfoSectionProps> = ({ recipe }) => {
   return (
     <div className={styles.info_container}>
       <div className={styles.info_section}>
-        <h2 className={styles.recipe_title}>Roasted Pineapple Pizza</h2>
+        <h2 className={styles.recipe_title}>{recipe.name}</h2>
         <section className={styles.likes_section}>
           <img src="../../../public/heart.png" alt="heart" />
-          <p>15 Likes</p>
+          <p>Cook Time: {recipe.cookTime}</p>
         </section>
         <section className={styles.recipe_description}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          {recipe.description}
         </section>
       </div>
       <button className={styles.full_recipe_button}>View Full Recipe</button>

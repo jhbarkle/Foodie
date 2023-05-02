@@ -1,11 +1,31 @@
+import { useEffect, useState } from 'react';
 import FridgeGridSection from '../FridgeGridSection/FridgeGridSection';
-import RecipeImageSection from '../RecipeImageSection/RecipeImageSection';
-import RecipeInfoSection from '../RecipeInfoSection/RecipeInfoSection';
+import RecipeImageSection from '../RecipeSection/RecipeImageSection/RecipeImageSection';
+import RecipeInfoSection from '../RecipeSection/RecipeInfoSection/RecipeInfoSection';
+import { recipes } from '../RecipeSection/Recipes';
 import TipGridSection from '../TipGridSection/TipGridSection';
 import WelcomeGridSection from '../WelcomeGridSection/WelcomeGridSection';
 import styles from './HomeGrid.module.scss';
 
 const HomeGrid = () => {
+  const [displayedRecipeIndex, setDisplayedRecipedIndex] = useState(0);
+  const [displayedRecipe, setDisplayedRecipe] = useState(recipes[0]);
+
+  useEffect(() => {
+    setDisplayedRecipe(recipes[displayedRecipeIndex]);
+  }, [displayedRecipeIndex]);
+
+  const getNextRecipe = (direction: number) => {
+    console.log('Expected Index Value: ', displayedRecipeIndex + direction);
+    if (displayedRecipeIndex + direction >= recipes.length) {
+      setDisplayedRecipedIndex(0);
+    } else if (displayedRecipeIndex + direction < 0) {
+      setDisplayedRecipedIndex(recipes.length - 1);
+    } else {
+      setDisplayedRecipedIndex(displayedRecipeIndex + direction);
+    }
+  };
+
   return (
     <>
       <div className={styles.grid_container_top}>
@@ -21,10 +41,13 @@ const HomeGrid = () => {
           <TipGridSection />
         </section>
         <section className={styles.grid_item} id={styles.four}>
-          <RecipeInfoSection />
+          <RecipeInfoSection recipe={displayedRecipe} />
         </section>
         <section className={styles.grid_item} id={styles.five}>
-          <RecipeImageSection image={'../../../public/bowl-salad.jpg'} />
+          <RecipeImageSection
+            image={displayedRecipe.image}
+            getNextRecipe={getNextRecipe}
+          />
         </section>
       </div>
     </>
