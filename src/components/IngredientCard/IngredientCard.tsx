@@ -3,9 +3,13 @@ import styles from './IngredientCard.module.scss';
 
 interface IngredientCardProps {
   name: string;
+  removeItem: (name: string) => void;
 }
 
-const IngredientCard: React.FC<IngredientCardProps> = ({ name }) => {
+const IngredientCard: React.FC<IngredientCardProps> = ({
+  name,
+  removeItem
+}) => {
   return (
     <li>
       <section className={styles.card_container}>
@@ -14,7 +18,10 @@ const IngredientCard: React.FC<IngredientCardProps> = ({ name }) => {
         </span>
 
         <span className={styles.ingr_delete_button_container}>
-          <button className={styles.delete_button}></button>
+          <button
+            onClick={() => removeItem(name)}
+            className={styles.delete_button}
+          ></button>
         </span>
       </section>
     </li>

@@ -8,11 +8,11 @@ interface RecipeInfoSectionProps {
 
 const RecipeInfoSection: React.FC<RecipeInfoSectionProps> = ({ recipe }) => {
   return (
-    <div className={styles.info_container}>
+    <div className={styles.featured_recipe_container}>
       <h4 className={styles.featured_recipes_title}>Featured Recipes</h4>
-      <div className={styles.info_section}>
+      <div className={styles.info_container}>
         <h2 className={styles.recipe_title}>{recipe.name}</h2>
-        <section className={styles.likes_section}>
+        <section className={styles.prep_time_section}>
           <img src="/clock.png" alt="clock" />
           <p>Prep Time: {recipe.prepTime} </p>
         </section>

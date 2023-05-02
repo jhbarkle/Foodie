@@ -1,6 +1,7 @@
 @import '../../../styleLibrary.scss';
 
-.info_container {
+/* Featured Recipe Container */
+.featured_recipe_container {
   display: flex;
   flex-direction: column;
   font-family: 'Raleway', sans-serif;
@@ -10,6 +11,7 @@
   align-items: flex-start;
 }
 
+/* Recipe Title */
 .featured_recipes_title {
   padding: 0;
   margin: 0;
@@ -18,11 +20,12 @@
   color: $grey;
 }
 
+/* View Full Recipe Button */
 .full_recipe_button {
   width: 30%;
   align-self: flex-end;
   border: none;
-  height: 80px;
+  height: 70px;
   background-color: $dark-gray;
   color: white;
   font-weight: 600;
@@ -39,10 +42,11 @@
   background-color: #95a5a6;
 }
 
-.info_section {
+/* Featured Recipe Info Container */
+.info_container {
   display: flex;
   flex-direction: column;
-  row-gap: 5px;
+  row-gap: 2px;
   text-align: left;
   padding: 0px 25px;
   margin-top: 20px;
@@ -58,7 +62,8 @@
   animation-fill-mode: forwards;
 }
 
-.likes_section {
+/* Prep Time Section */
+.prep_time_section {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -69,19 +74,21 @@
   animation-fill-mode: forwards;
 }
 
-.likes_section > img {
+/* Prep Time Icon */
+.prep_time_section > img {
   height: 28px;
   aspect-ratio: 1;
 }
 
-.likes_section > p {
+/* Prep Time Title */
+.prep_time_section > p {
   color: black;
   font-weight: 500;
   font-size: 18px;
 }
 
+/* Featured Recipe Description */
 .recipe_description {
-  margin-top: 10px;
   font-size: 17px;
 
   animation: fadeInAnimation ease 3s;
