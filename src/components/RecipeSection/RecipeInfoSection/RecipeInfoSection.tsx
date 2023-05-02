@@ -12,7 +12,7 @@ const RecipeInfoSection: React.FC<RecipeInfoSectionProps> = ({ recipe }) => {
       <div className={styles.info_section}>
         <h2 className={styles.recipe_title}>{recipe.name}</h2>
         <section className={styles.likes_section}>
-          <img src="../../../public/heart.png" alt="heart" />
+          <img src="/clock.png" alt="clock" />
           <p>Cook Time: {recipe.cookTime}</p>
         </section>
         <section className={styles.recipe_description}>

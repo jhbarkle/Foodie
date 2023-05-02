@@ -6,10 +6,10 @@
   align-items: center;
   justify-content: stretch;
   flex-direction: column;
-  height: 86.5%;
+  height: 94.5%;
   font-family: 'Raleway', sans-serif;
   background-color: $grey;
-  padding: 50px 20px 0 20px;
+  padding: 20px 20px 0 20px;
 }
 
 /* Tip title and Tip description */
@@ -29,6 +29,7 @@ p {
   font-weight: 500;
   width: 90%;
   letter-spacing: 1.2px;
+  margin-top: 50px;
 }
 
 /* Animations */
