@@ -14,16 +14,11 @@ const FridgeGridSection = () => {
   const isIngredientListEmpty = ingredientList.length === 0;
 
   const updateList = (event: any) => {
-    if (!searchIngredient) {
-      setIsError({
-        isError: true,
-        message: 'You have not typed anything.'
-      });
-
-      return;
-    }
-
-    if (event.key === 'Enter' && !ingredientList.includes(event.target.value)) {
+    if (
+      event.key === 'Enter' &&
+      !ingredientList.includes(event.target.value) &&
+      event.target.value.length > 0
+    ) {
       setIngredientList([...ingredientList, event.target.value]);
       event.target.value = '';
     }
