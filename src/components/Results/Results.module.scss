@@ -2,7 +2,8 @@
 
 /* Results Container */
 .result_container {
-  margin: 100px;
+  padding: 100px 30px;
+  background-color: $grey;
 }
 
 .back_link {
@@ -15,6 +16,7 @@
   }
 }
 
+/* Back Button */
 .back_button {
   border: none;
   background-color: transparent;
@@ -22,15 +24,29 @@
   text-align: center;
   cursor: pointer;
   transition: 0.3s ease-in-out;
-  padding: 8px;
+  padding: 10px;
+  margin-left: 70px;
 
   &:hover {
-    background-color: $grey;
+    background-color: $ghost-white;
+    margin-left: 90px;
     padding-right: 100px;
   }
 }
 
 .back_button > img {
-  height: 45px;
+  height: 40px;
   aspect-ratio: 1;
+}
+
+/* Results Cards Container */
+.result_cards_container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  width: fit-content;
+  justify-content: center;
+  gap: 25px;
 }

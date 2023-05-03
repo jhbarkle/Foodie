@@ -13,6 +13,10 @@
   font-size: 18px;
   box-sizing: border-box;
   padding-left: 25px;
+
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 /* Added Ingredients */
@@ -81,6 +85,10 @@ h2 {
   font-weight: 600;
   font-size: 17px;
   cursor: pointer;
+
+  animation: fadeInAnimation ease 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 
   &:not(:disabled):hover {
     background-color: #95a5a6;
