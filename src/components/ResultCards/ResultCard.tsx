@@ -1,16 +1,25 @@
 import styles from './ResultCard.module.scss';
 
+interface Hits {
+  hits: Hit[];
+}
+
+interface Hit {
+  recipe: SearchedRecipe;
+}
+
 export interface SearchedRecipe {
-  name: string;
-  description: string;
+  label: string;
   image: string;
-  likes: string;
-  missedIngredients: [string];
-  link: string;
+  yield: number;
+  cuisineType: string[];
+  mealType: string[];
+  totalTime: number;
+  url: string;
 }
 
 interface ResultCardProps {
-  recipe?: SearchedRecipe;
+  recipe: SearchedRecipe;
 }
 
 const ResultCard: React.FC<ResultCardProps> = () => {

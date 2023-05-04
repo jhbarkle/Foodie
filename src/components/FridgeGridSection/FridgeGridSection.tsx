@@ -33,7 +33,7 @@ const FridgeGridSection = () => {
   useEffect(() => {
     localStorage.setItem('ingredientList', JSON.stringify(ingredientList));
     console.log(
-      'From Session',
+      'From Local Storage: ',
       JSON.parse(localStorage.getItem('ingredientList') ?? '')
     );
   }, [ingredientList]);
