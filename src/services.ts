@@ -1,14 +1,12 @@
-import { SearchedRecipe } from './components/ResultCards/ResultCard';
+import { SearchedRecipe } from './models/searchedRecipe';
 import { getIngredientsFromSessionStorage } from './utils';
 
+// API data
 const edamamAppID = '8d81d4cb';
 const edamamAppKeys = 'dd41a582d3b8e032fe14c2d4f94d9b81';
-const q = 'chicken%2C%20milk%2C%20onions';
-// chicken%2C%20milk
 const baseURL = 'https://api.edamam.com/api/recipes/v2';
 
-const requestURL = `${baseURL}?type=public&q=${q}&app_id=${edamamAppID}&app_key=${edamamAppKeys}&imageSize=REGULAR`;
-
+// Formats added ingredients into the expected query
 export const createIngredientQuery = (): string => {
   const ingredientsFromLocalStorage = getIngredientsFromSessionStorage();
   let ingQuery = '';
@@ -29,6 +27,8 @@ export const createIngredientQuery = (): string => {
 };
 
 export const getRecipes = async (): Promise<SearchedRecipe[]> => {
+  const query = createIngredientQuery();
+  const requestURL = `${baseURL}?type=public&q=${query}&app_id=${edamamAppID}&app_key=${edamamAppKeys}&imageSize=REGULAR`;
   fetch(requestURL).then(async (response) => {
     const data = await response.json();
     const recipes: SearchedRecipe[] = [

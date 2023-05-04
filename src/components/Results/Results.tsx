@@ -1,105 +1,113 @@
 import { Link } from 'react-router-dom';
 import styles from './Results.module.scss';
-import ResultCard, { SearchedRecipe } from '../ResultCards/ResultCard';
+import ResultCard from '../ResultCards/ResultCard';
 import { useEffect, useState } from 'react';
 import { getRecipes } from '../../services';
-import { getIngredientsFromSessionStorage } from '../../utils';
+import { SearchedRecipe } from '../../models/searchedRecipe';
 
-const recipes: SearchedRecipe[] = [
-  {
-    label: 'name',
-    yield: 4,
-    image: '',
-    cuisineType: [''],
-    mealType: [''],
-    url: '',
-    totalTime: 8
-  },
-  {
-    label: 'name',
-    yield: 4,
-    image: '',
-    cuisineType: [''],
-    mealType: [''],
-    url: '',
-    totalTime: 8
-  },
-  {
-    label: 'name',
-    yield: 4,
-    image: '',
-    cuisineType: [''],
-    mealType: [''],
-    url: '',
-    totalTime: 8
-  },
-  {
-    label: 'name',
-    yield: 4,
-    image: '',
-    cuisineType: [''],
-    mealType: [''],
-    url: '',
-    totalTime: 8
-  },
-  {
-    label: 'name',
-    yield: 4,
-    image: '',
-    cuisineType: [''],
-    mealType: [''],
-    url: '',
-    totalTime: 8
-  },
-  {
-    label: 'name',
-    yield: 4,
-    image: '',
-    cuisineType: [''],
-    mealType: [''],
-    url: '',
-    totalTime: 8
-  },
-  {
-    label: 'name',
-    yield: 4,
-    image: '',
-    cuisineType: [''],
-    mealType: [''],
-    url: '',
-    totalTime: 8
-  },
-  {
-    label: 'name',
-    yield: 4,
-    image: '',
-    cuisineType: [''],
-    mealType: [''],
-    url: '',
-    totalTime: 8
-  },
-  {
-    label: 'name',
-    yield: 4,
-    image: '',
-    cuisineType: [''],
-    mealType: [''],
-    url: '',
-    totalTime: 8
-  }
-];
+// const recipes: SearchedRecipe[] = [
+//   {
+//     label: 'name',
+//     yield: 4,
+//     image: '',
+//     cuisineType: [''],
+//     mealType: [''],
+//     url: '',
+//     totalTime: 8
+//   },
+//   {
+//     label: 'name',
+//     yield: 4,
+//     image: '',
+//     cuisineType: [''],
+//     mealType: [''],
+//     url: '',
+//     totalTime: 8
+//   },
+//   {
+//     label: 'name',
+//     yield: 4,
+//     image: '',
+//     cuisineType: [''],
+//     mealType: [''],
+//     url: '',
+//     totalTime: 8
+//   },
+//   {
+//     label: 'name',
+//     yield: 4,
+//     image: '',
+//     cuisineType: [''],
+//     mealType: [''],
+//     url: '',
+//     totalTime: 8
+//   },
+//   {
+//     label: 'name',
+//     yield: 4,
+//     image: '',
+//     cuisineType: [''],
+//     mealType: [''],
+//     url: '',
+//     totalTime: 8
+//   },
+//   {
+//     label: 'name',
+//     yield: 4,
+//     image: '',
+//     cuisineType: [''],
+//     mealType: [''],
+//     url: '',
+//     totalTime: 8
+//   },
+//   {
+//     label: 'name',
+//     yield: 4,
+//     image: '',
+//     cuisineType: [''],
+//     mealType: [''],
+//     url: '',
+//     totalTime: 8
+//   },
+//   {
+//     label: 'name',
+//     yield: 4,
+//     image: '',
+//     cuisineType: [''],
+//     mealType: [''],
+//     url: '',
+//     totalTime: 8
+//   },
+//   {
+//     label: 'name',
+//     yield: 4,
+//     image: '',
+//     cuisineType: [''],
+//     mealType: [''],
+//     url: '',
+//     totalTime: 8
+//   }
+// ];
 
 const Results = () => {
   const [recipeResults, setRecipeResults] = useState<SearchedRecipe[]>([]);
-  const [ingredientList] = useState(getIngredientsFromSessionStorage());
-  const [loading, isLoading] = useState<boolean>(true);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    // const recipes = async () => {
-    //   await getRecipes().then((recipes) => {
-    //     setRecipeResults(recipes);
-    //   });
-    // };
+    const recipes = async () => {
+      // await getRecipes().then((recipeResults) => {
+      //   isLoading(false);
+      //   setRecipeResults(recipeResults);
+      // });
+      console.log('Got Recipes');
+      setIsLoading(false);
+    };
+
+    setTimeout(() => {
+      recipes();
+    }, 5000);
+
+    // recipes();
   }, []);
 
   return (
@@ -108,7 +116,7 @@ const Results = () => {
         <div className={styles.secondary_nav_container}>
           <Link className={styles.back_link} to="/">
             <button className={styles.back_button}>
-              <img src="../../../public/left-arrow.png" alt="back" />
+              <img src="/left-arrow.png" alt="back" />
             </button>
           </Link>
 
@@ -117,13 +125,11 @@ const Results = () => {
           </h1>
         </div>
 
-        {loading && (
+        {isLoading ? (
           <div className={styles.loading_container}>
-            <img src="../../../public/loading-indicator.gif" alt="" />
+            <img src="/loading-indicator.gif" alt="" />
           </div>
-        )}
-
-        {recipeResults.length > 0 ? (
+        ) : recipeResults.length > 0 ? (
           <section className={styles.result_cards_container}>
             {recipeResults.map((recipe) => {
               return <ResultCard key={recipe.label} recipe={recipe} />;
@@ -131,7 +137,7 @@ const Results = () => {
           </section>
         ) : (
           <section className={styles.no_results}>
-            <img src="../../../public/cancel.png" alt="" />
+            <img src="/cancel.png" alt="" />
             <p>Sorry, we could not find any results.</p>
           </section>
         )}

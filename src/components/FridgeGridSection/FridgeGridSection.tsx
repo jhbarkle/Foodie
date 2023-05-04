@@ -19,7 +19,8 @@ const FridgeGridSection = () => {
       !ingredientList.includes(event.target.value) &&
       event.target.value.length > 0
     ) {
-      setIngredientList([...ingredientList, event.target.value]);
+      const inputIngredientString = event.target.value;
+      setIngredientList([...ingredientList, inputIngredientString.trim()]);
       event.target.value = '';
     }
   };

@@ -1,22 +1,5 @@
+import { SearchedRecipe } from '../../models/searchedRecipe';
 import styles from './ResultCard.module.scss';
-
-interface Hits {
-  hits: Hit[];
-}
-
-interface Hit {
-  recipe: SearchedRecipe;
-}
-
-export interface SearchedRecipe {
-  label: string;
-  image: string;
-  yield: number;
-  cuisineType: string[];
-  mealType: string[];
-  totalTime: number;
-  url: string;
-}
 
 interface ResultCardProps {
   recipe: SearchedRecipe;
