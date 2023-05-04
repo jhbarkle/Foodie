@@ -1,6 +1,5 @@
 import styles from './RecipeImageSection.module.scss';
 
-/* eslint-disable react/prop-types */
 interface RecipeImageProps {
   image: string;
   getNextRecipe: (direction: number) => void;

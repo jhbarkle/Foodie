@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import styles from './IngredientCard.module.scss';
 
 interface IngredientCardProps {
@@ -14,7 +13,7 @@ const IngredientCard: React.FC<IngredientCardProps> = ({
     <li>
       <section className={styles.card_container}>
         <span className={styles.ingr_name_text_container}>
-          <p>{name}</p>
+          <p className={styles.ingr_name}>{name}</p>
         </span>
 
         <span className={styles.ingr_delete_button_container}>

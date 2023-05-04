@@ -94,20 +94,19 @@ const Results = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    const recipes = async () => {
-      // await getRecipes().then((recipeResults) => {
-      //   isLoading(false);
-      //   setRecipeResults(recipeResults);
-      // });
-      console.log('Got Recipes');
-      setIsLoading(false);
+    const searchForRecipes = async () => {
+      await getRecipes()
+        .then((recipeResults) => {
+          console.log('Got Recipes');
+          setRecipeResults(recipeResults);
+        })
+        .then(() => {
+          setIsLoading(false);
+          console.log('Recipe Results', recipeResults);
+        });
     };
 
-    setTimeout(() => {
-      recipes();
-    }, 5000);
-
-    // recipes();
+    searchForRecipes();
   }, []);
 
   return (

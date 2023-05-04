@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import styles from './TipGridSection.module.scss';
-import { tips } from './Tips';
+import { tips } from './tips';
 
 const TipGridSection = () => {
   const [tip, setTip] = useState(tips[4]);
   const [animate, setAnimate] = useState(true);
 
   useEffect(() => {
-    const timer = setInterval(getRandomTip, 7000);
+    const timer = setInterval(getRandomTip, 5000);
     return () => {
       clearInterval(timer);
     };
