@@ -4,8 +4,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Raleway', sans-serif;
 
+  /* Animations */
   animation: fadeInAnimation ease 1.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -60,6 +60,5 @@
     justify-content: space-between;
     padding-left: 1px;
     align-items: center;
-    font-family: 'Raleway', sans-serif;
   }
 }

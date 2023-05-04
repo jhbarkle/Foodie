@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { Link } from 'react-router-dom';
 import { Recipe } from '../Recipes';
 import styles from './RecipeInfoSection.module.scss';
 
@@ -20,7 +21,9 @@ const RecipeInfoSection: React.FC<RecipeInfoSectionProps> = ({ recipe }) => {
           {recipe.description}
         </section>
       </div>
-      <button className={styles.full_recipe_button}>View Full Recipe</button>
+      <Link className={styles.full_recipe_button} to="/results">
+        <button>View Full Recipe</button>
+      </Link>
     </div>
   );
 };

@@ -9,7 +9,6 @@
 
 .back_link {
   text-decoration: none;
-  font-family: 'Raleway', sans-serif;
 
   &:hover > h2 {
     left: -100px;
@@ -59,7 +58,6 @@
 
 .results_header_text {
   margin-right: 100px;
-  font-family: 'Raleway', sans-serif;
   font-size: 35px;
   color: white;
 }
@@ -73,6 +71,7 @@
   padding: 0 50px;
   padding-top: 50px;
 
+  /* Animations */
   animation: fadeInAnimation ease 0.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -85,7 +84,6 @@
   }
 
   & > p {
-    font-family: 'Raleway', sans-serif;
     padding-top: 20px;
     font-size: 20px;
     font-weight: 700;
@@ -100,6 +98,7 @@
   justify-content: center;
   padding-top: 200px;
 
+  /* Animations */
   animation: fadeInAnimation ease 0.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -131,8 +130,6 @@
 
   .back_link {
     display: flex;
-    text-decoration: none;
-    font-family: 'Raleway', sans-serif;
 
     &:hover > h2 {
       left: -100px;
