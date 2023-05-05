@@ -9,6 +9,9 @@ const Navbar = () => {
           <a className={styles.logo_text} href="/">
             Foodie
           </a>
+          <a id={styles.about_link} href="/about">
+            About
+          </a>
         </nav>
       </header>
     </>

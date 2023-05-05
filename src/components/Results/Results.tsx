@@ -5,90 +5,6 @@ import { useEffect, useState } from 'react';
 import { getRecipes } from '../../services';
 import { SearchedRecipe } from '../../models/searchedRecipe';
 
-// const recipes: SearchedRecipe[] = [
-//   {
-//     label: 'name',
-//     yield: 4,
-//     image: '',
-//     cuisineType: [''],
-//     mealType: [''],
-//     url: '',
-//     totalTime: 8
-//   },
-//   {
-//     label: 'name',
-//     yield: 4,
-//     image: '',
-//     cuisineType: [''],
-//     mealType: [''],
-//     url: '',
-//     totalTime: 8
-//   },
-//   {
-//     label: 'name',
-//     yield: 4,
-//     image: '',
-//     cuisineType: [''],
-//     mealType: [''],
-//     url: '',
-//     totalTime: 8
-//   },
-//   {
-//     label: 'name',
-//     yield: 4,
-//     image: '',
-//     cuisineType: [''],
-//     mealType: [''],
-//     url: '',
-//     totalTime: 8
-//   },
-//   {
-//     label: 'name',
-//     yield: 4,
-//     image: '',
-//     cuisineType: [''],
-//     mealType: [''],
-//     url: '',
-//     totalTime: 8
-//   },
-//   {
-//     label: 'name',
-//     yield: 4,
-//     image: '',
-//     cuisineType: [''],
-//     mealType: [''],
-//     url: '',
-//     totalTime: 8
-//   },
-//   {
-//     label: 'name',
-//     yield: 4,
-//     image: '',
-//     cuisineType: [''],
-//     mealType: [''],
-//     url: '',
-//     totalTime: 8
-//   },
-//   {
-//     label: 'name',
-//     yield: 4,
-//     image: '',
-//     cuisineType: [''],
-//     mealType: [''],
-//     url: '',
-//     totalTime: 8
-//   },
-//   {
-//     label: 'name',
-//     yield: 4,
-//     image: '',
-//     cuisineType: [''],
-//     mealType: [''],
-//     url: '',
-//     totalTime: 8
-//   }
-// ];
-
 const Results = () => {
   const [recipeResults, setRecipeResults] = useState<SearchedRecipe[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -97,12 +13,10 @@ const Results = () => {
     const searchForRecipes = async () => {
       await getRecipes()
         .then((recipeResults) => {
-          console.log('Got Recipes');
           setRecipeResults(recipeResults);
         })
         .then(() => {
           setIsLoading(false);
-          console.log('Recipe Results', recipeResults);
         });
     };
 
