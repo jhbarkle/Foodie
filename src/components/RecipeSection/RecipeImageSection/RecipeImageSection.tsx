@@ -17,14 +17,12 @@ const RecipeImageSection: React.FC<RecipeImageProps> = ({
       <span className={styles.buttons_container}>
         <button
           onClick={() => {
-            console.log('Left Button Clicked');
             getNextRecipe(-1);
           }}
           className={styles.left_button}
         ></button>
         <button
           onClick={() => {
-            console.log('Right Button Clicked');
             getNextRecipe(1);
           }}
           className={styles.right_button}

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 module.exports = {
   env: {
     browser: true,
@@ -23,6 +24,7 @@ module.exports = {
     'no-unused-vars': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-uses-react': 'off',
-    'react/prop-types': 'off'
+    'react/prop-types': 'off',
+    '@typescript-eslint/no-explicit-any': 'off'
   }
 };
